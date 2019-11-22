@@ -20,8 +20,10 @@ def response():
     if request.method == 'POST':
         result = get_true_services(request.get_json())
         return jsonify(result)
+    if request.method =='GET:
+        return 'GET request received'
     else:
-        return 'Error - I can only handle POST requests'
+        return 'Error - I can only handle POST and GET requests'
 
 
 if __name__ == '__main__':
